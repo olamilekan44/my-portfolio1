@@ -1,0 +1,674 @@
+* {
+  scroll-behavior: smooth;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+}
+
+.navbar {
+  display: flex;
+  position: fixed;
+  width: 100vw;
+  align-items: center;
+  background-color: white;
+  z-index: 999;
+}
+
+.brand-title {
+  font-size: 2rem;
+  margin: 0.5rem;
+  margin-left: 5vw;
+}
+
+.navbar-links ul {
+  display: flex;
+}
+
+.navbar-links li {
+  list-style: none;
+}
+
+.navbar-links li a {
+  text-decoration: none;
+  color: black;
+  font-size: 1.5rem;
+  font-weight: 545;
+  margin-left: 5vw;
+  margin-right: 5vw;
+  padding: 1rem;
+  display: block;
+}
+
+.navbar-links li:current {
+  background-color: gray;
+}
+
+.navbar-links li:hover {
+  background-color: gray;
+}
+
+.toggle-button {
+  position: absolute;
+  top: 0.75rem;
+  right: 1rem;
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 21px;
+}
+
+.toggle-button .bar {
+  height: 3px;
+  width: 100%;
+  background-color: black;
+  border-radius: 10px;
+}
+
+#home {
+  min-height: 100vh;
+}
+
+#home h1 {
+  font-size: 75px;
+  margin-left: 15vw;
+  margin-top: 20vh;
+  width: max-content;
+}
+
+.home-main {
+  display: flex;
+  justify-content: space-between;
+}
+
+#home p {
+  display: block;
+  margin-left: 15vw;
+  font-size: 2.2rem;
+  color: blue;
+  min-width: 330px;
+}
+
+.my-img {
+  width: 420px;
+  height: 580px;
+  border-radius: 50%;
+  margin-top: 10vh;
+  margin-left: 5vw;
+  margin-right: 3%;
+}
+
+.btn-container {
+  margin-left: 15vw;
+  margin-top: 3%;
+  display: flex;
+  width: 240px;
+  justify-content: space-between;
+}
+
+.btn-container button {
+  background-color: black;
+  color: white;
+  height: 3rem;
+  width: 100px;
+  border-radius: 15px;
+  font-size: 0.97em;
+  padding: 0.75rem;
+  cursor: pointer;
+}
+
+.icon-container {
+  height: 60px;
+  width: 280px;
+  margin-top: 60px;
+  margin-left: 15vw;
+}
+
+.icon-container ul {
+  display: flex;
+  height: 100%;
+  position: relative;
+}
+
+.icon-container ul li {
+  text-decoration: none;
+  background-color: transparent;
+  position: relative;
+  padding-right: 30px;
+  font-size: 45px;
+  list-style-type: none;
+}
+
+.icon-container a {
+  color: black;
+}
+
+figcaption {
+  font-size: 16px;
+}
+
+#about {
+  min-height: 100vh;
+  background-color: black;
+}
+
+#about h3 {
+  font-size: 45px;
+  font-family: cursive;
+  color: #fff;
+  text-align: center;
+  padding-top: 50px;
+}
+
+.about-main {
+  display: flex;
+  justify-content: space-evenly;
+  margin: 0.75rem;
+}
+
+.about-2 {
+  flex: 1;
+  height: 570px;
+  border-radius: 30px;
+  margin-left: 8px;
+  background-color: black;
+  border-right: 2px solid white;
+  border-left: 2px solid white;
+}
+
+.about-2 h6 {
+  font-size: 35px;
+  font-style: italic;
+  position: relative;
+  text-align: center;
+  color: #fff;
+}
+
+.about-2 p {
+  font-size: 25px;
+  color: #fff;
+  line-height: 30px;
+  width: max-content;
+  position: relative;
+  padding-left: 20px;
+  letter-spacing: 2px;
+}
+
+.my-skills {
+  line-height: 30px;
+  padding-left: 60px;
+  font-size: 27px;
+  color: #fff;
+  position: relative;
+  margin-bottom: 10px;
+}
+
+progress {
+  width: 80%;
+  height: 20px;
+  display: inline-block;
+  appearance: none;
+}
+
+progress[value]::-webkit-progress-bar {
+  background-color: #eee;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25) inset;
+}
+
+progress[value]::-webkit-progress-value {
+  background-image: -webkit-linear-gradient(
+      -45deg,
+      transparent 33%,
+      rgba(0, 0, 0, 0.1) 33%,
+      rgba(0, 0, 0, 0.1) 66%,
+      transparent 66%
+    ),
+    -webkit-linear-gradient(top, rgba(255, 255, 255, 0.25), rgba(0, 0, 0, 0.25)),
+    -webkit-linear-gradient(left, #09c, rgb(29, 87, 212));
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  background-size: 35px 20px, 100%, 100% 100% 100%;
+}
+
+.about-1 {
+  flex: 1;
+  height: 570px;
+  margin-right: 8px;
+  border-radius: 30px;
+  background-color: #fff;
+}
+
+.intro {
+  height: 280px;
+  border-radius: 30px;
+  border-bottom: 2px solid white;
+  padding: 20px;
+  font-family: sans-serif;
+}
+
+.intro h6 {
+  margin-bottom: 2vh;
+}
+
+.intro p {
+  text-align: justify;
+  font-weight: 600;
+  text-overflow: ellipsis;
+}
+
+.i-love {
+  height: 280px;
+  margin-top: 10px;
+  border-radius: 30px;
+  border-top: 2px solid white;
+}
+
+.i-love ul {
+  font-size: 30px;
+  font-style: oblique;
+  color: black;
+  line-height: 45px;
+  margin-left: 30px;
+}
+
+.i-love ul li {
+  padding-right: 30px;
+  font-weight: 600;
+}
+
+.about-1 h6 {
+  text-align: center;
+  font-size: 35px;
+  padding-top: 5px;
+}
+
+#projects h3 {
+  text-align: center;
+  padding-top: 55px;
+  font-size: 35px;
+}
+
+.projects-container {
+  display: flex;
+  margin-top: 4px;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+
+.projects-container div {
+  border-radius: 50px;
+  padding: 10px;
+  height: 290px;
+  width: 280px;
+  margin-bottom: 20px;
+  text-align: center;
+  background-color: black;
+}
+
+.projects-container h5 {
+  font-size: 25px;
+  padding-bottom: 6px;
+  color: white;
+}
+
+.projects-container p {
+  color: #fff;
+  padding-bottom: 5px;
+}
+
+.projects-container button {
+  background-color: black;
+  color: white;
+  margin-top: 4px;
+  height: 38px;
+  width: 70px;
+  border-radius: 9px;
+  font-weight: 600;
+  cursor: pointer;
+  justify-content: space-between;
+}
+
+.projects-container button:hover {
+  background-color: white;
+  color: blue;
+  transition-duration: 0.6s;
+  font-size: 90%;
+}
+
+.project-img {
+  border-radius: 10px;
+  height: 150px;
+  width: 250px;
+}
+
+.sc-btn {
+  margin-left: 30px;
+}
+
+#contact {
+  background-color: black;
+  color: white;
+  min-height: 100%;
+}
+
+.nav-space {
+  height: 8vh;
+  background-color: white;
+}
+
+#contact h3 {
+  font-size: 50px;
+  letter-spacing: 0.5vw;
+  text-align: center;
+}
+
+.hero {
+  width: 100%;
+  height: fit-content;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+}
+
+form {
+  width: 90%;
+  max-width: 600px;
+  margin-top: 8vh;
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.row .input-group {
+  flex-basis: 48%;
+}
+
+.input-group {
+  margin-bottom: 30px;
+  position: relative;
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 10px;
+  outline: 0;
+  border: 1px solid #fff;
+  color: white;
+  background: transparent;
+  font-size: 15px;
+}
+
+label {
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  padding: 10px;
+  color: #fff;
+  cursor: text;
+  transition: 0.2s;
+}
+
+input:focus ~ label,
+input:valid ~ label,
+textarea:focus ~ label,
+textarea:valid ~ label {
+  top: -35px;
+  font-size: 14px;
+}
+
+#submit-btn {
+  padding: 10px 0;
+  color: white;
+  outline: none;
+  background: transparent;
+  border: 1px solid #fff;
+  width: 100%;
+  cursor: pointer;
+}
+
+#submit-btn:hover {
+  background-color: rgb(190, 184, 184);
+  transition-duration: 1s;
+  color: black;
+  font-weight: 700;
+}
+
+.social-links {
+  height: 8vh;
+  width: 47vw;
+  margin-top: 30px;
+  margin-left: 26vw;
+  position: relative;
+}
+
+.social-links ul {
+  display: flex;
+  height: 100%;
+  position: relative;
+}
+
+.social-links li {
+  text-decoration: none;
+  position: relative;
+  margin-left: 5px;
+  margin-right: 5px;
+  width: 100%;
+  text-align: center;
+  align-items: center;
+  list-style-type: none;
+}
+
+.social-links a {
+  font-size: 45px;
+}
+
+@media screen and (max-width: 1140px) {
+  .navbar-links li a {
+    margin-left: 4vw;
+    margin-right: 4vw;
+  }
+
+  .my-img {
+    width: 30vw;
+    height: 45vh;
+    margin-top: 12%;
+    margin-left: -10%;
+    border-radius: 50%;
+  }
+
+  .about-main {
+    flex-wrap: wrap;
+    margin-top: 5px;
+  }
+
+  #about h3 {
+    font-size: 45px;
+  }
+
+  .about-2 {
+    height: 560px;
+    border-radius: 30px;
+  }
+
+  .about-2 h6 {
+    font-size: 30px;
+  }
+
+  .about-2 p {
+    font-size: 23px;
+    line-height: 30px;
+    padding-left: 15px;
+    width: max-content;
+  }
+
+  .my-skills {
+    line-height: 28px;
+    padding-left: 20px;
+    font-size: 25px;
+    margin-bottom: 10px;
+  }
+
+  .about-1 {
+    height: 560px;
+  }
+
+  .intro {
+    height: 275px;
+  }
+
+  .i-love {
+    height: 275px;
+  }
+
+  .i-love ul {
+    font-size: 28px;
+    font-style: normal;
+    margin-left: 30px;
+    width: max-content;
+    line-height: 45px;
+  }
+
+  .about-1 h6 {
+    text-align: center;
+    font-size: 32px;
+    padding-top: 5px;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  .my-img {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 720px) {
+  .brand-title {
+    color: #fff;
+  }
+  .toggle-button {
+    display: flex;
+  }
+
+  .toggle-button .bar {
+    background-color: white;
+  }
+
+  .navbar-links {
+    display: none;
+    width: 100%;
+  }
+
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    background-color: black;
+  }
+
+  .navbar-links ul {
+    width: 100%;
+    flex-direction: column;
+  }
+
+  .navbar-links li {
+    text-align: center;
+  }
+
+  .navbar-links li a {
+    padding: 0.5rem 1rem;
+    color: #fff;
+  }
+
+  .navbar-links.active {
+    display: flex;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .project-wrapper {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 597px) {
+  .intro {
+    height: 275px;
+  }
+
+  .i-love {
+    height: 275px;
+  }
+
+  .row {
+    display: block;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  #home h1 {
+    font-size: 64px;
+    margin-left: 10%;
+  }
+
+  #home p {
+    margin-left: 10%;
+  }
+
+  .btn-container {
+    margin-left: 10%;
+  }
+
+  .icon-container {
+    margin-left: 10%;
+  }
+}
+
+@media screen and (max-width: 430px) {
+  #home h1 {
+    margin-left: 8%;
+    line-height: 65px;
+    font-size: 15vw;
+  }
+
+  #home p {
+    margin-left: 8%;
+    margin-top: 20px;
+    font-size: clamp(1.9rem, 2.1rem, 2.11rem);
+    width: max-content;
+  }
+
+  .btn-container {
+    margin-left: 8%;
+    margin-top: 30px;
+  }
+
+  .icon-container {
+    margin-left: 8%;
+    margin-top: 40px;
+  }
+}
